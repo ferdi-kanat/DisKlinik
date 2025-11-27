@@ -57,7 +57,7 @@ Modern dental clinic management system built with Windows Forms and LocalDB SQL 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/disklinik.git
+   git clone https://github.com/ferdi-kanat/disklinik.git
    cd disklinik
    ```
 
@@ -307,7 +307,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📧 Contact
 
-Project Link: [https://github.com/yourusername/disklinik](https://github.com/yourusername/disklinik)
+Project Link: [https://github.com/ferdi-kanat/disklinik](https://github.com/ferdi-kanat/disklinik)
 
 ---
 
