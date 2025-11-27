@@ -1,0 +1,24 @@
+using System.Data.SqlClient;
+
+namespace DisKlinik
+{
+    /// <summary>
+    /// Database connection string factory.
+    /// IMPORTANT: Copy this file to 'ConnectionString.cs' and update the path to your LocalDB location.
+    /// </summary>
+    class ConnectionString
+    {
+        public SqlConnection GetCon()
+        {
+            SqlConnection baglanti = new SqlConnection
+            {
+                // TODO: Update this path to your local database file location
+                // Example paths:
+                // - Windows: C:\Users\YourUsername\Documents\DentalDb.mdf
+                // - OneDrive: C:\Users\YourUsername\OneDrive\Documents\DentalDb.mdf
+                ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\PATH\TO\YOUR\DentalDb.mdf;Integrated Security=True;Connect Timeout=30"
+            };
+            return baglanti;
+        }
+    }
+}

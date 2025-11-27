@@ -57,17 +57,23 @@ Modern dental clinic management system built with Windows Forms and LocalDB SQL 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ferdi-kanat/disklinik.git
-   cd disklinik
+   git clone https://github.com/ferdi-kanat/DisKlinik.git
+   cd DisKlinik
    ```
 
-2. **Update database path**
-
-   Edit `ConnectionString.cs` and update the MDF file path:
+2. **Setup database connection**
+   
+   Copy the example connection string file:
+   ```bash
+   copy ConnectionString.cs.example ConnectionString.cs
+   ```
+   
+   Then edit `ConnectionString.cs` and update the database path:
    ```csharp
-   private const string ConnectionStringValue =
-       @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\YOUR_PATH\DentalDb.mdf;...";
+   ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\YourUsername\Documents\DentalDb.mdf;Integrated Security=True;Connect Timeout=30"
    ```
+   
+   **Note:** You'll need to create the `DentalDb.mdf` database file or use an existing one.
 
 3. **Restore NuGet packages**
    ```bash
@@ -266,12 +272,13 @@ public static DataTable Search(string searchText)
 
 ## 🐛 Known Limitations
 
-- ⚠️ Hardcoded connection string (user-specific path)
+- ⚠️ User-specific database path (requires manual configuration)
 - ⚠️ Text-based relationships instead of foreign keys
 - ⚠️ Basic validation (phone length only)
 - ⚠️ No logging infrastructure
 - ⚠️ No unit tests
 - ⚠️ Static classes (no dependency injection)
+- ⚠️ Database schema must be created manually (no migrations)
 
 ## 🤝 Contributing
 
@@ -307,7 +314,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📧 Contact
 
-Project Link: [https://github.com/ferdi-kanat/disklinik](https://github.com/ferdi-kanat/disklinik)
+Project Link: [https://github.com/ferdi-kanat/DisKlinik](https://github.com/ferdi-kanat/DisKlinik)
 
 ---
 
